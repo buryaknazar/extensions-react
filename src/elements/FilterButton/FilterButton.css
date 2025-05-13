@@ -1,0 +1,26 @@
+.filter-button {
+	background-color: var(--button-background-color);
+	border: 1px solid var(--card-border-color);
+	padding: 0.5rem 1rem;
+	border-radius: 16px;
+	color: var(--button-text-color);
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: var(--fw-500);
+}
+
+.filter-button:hover {
+	background-color: var(--button-hover-background-color);
+	color: var(--button-hover-text-color);
+}
+
+.filter-button.active {
+	background-color: var(--red-400);
+	border-color: var(--red-400);
+	color: var(--button-active-text-color);
+}
+
+.filter-button.active:hover {
+	background-color: var(--red-500);
+	border-color: var(--red-500);
+}

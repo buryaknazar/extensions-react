@@ -1,0 +1,15 @@
+.theme-switch-button {
+	border: none;
+	outline: none;
+	background-color: var(--switch-button-background-color);
+	padding: 0.6rem;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.theme-switch-button:hover {
+	background-color: var(--switch-button-hover-background-color);
+}

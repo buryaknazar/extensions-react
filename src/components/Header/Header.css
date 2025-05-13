@@ -1,0 +1,25 @@
+header {
+	padding: 2rem 5rem;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--card-background-color);
+	border: 1px solid var(--card-border-color);
+	padding: 0.8rem;
+	border-radius: 18px;
+}
+
+@media (max-width: 600px) {
+	header {
+		padding: 2rem 1rem;
+	}
+}
+
+@media (max-width: 900px) {
+	header {
+		padding: 2rem 2rem;
+	}
+}

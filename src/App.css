@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+
+:root {
+	--font-size: 16px;
+	--dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+	--light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+	--font-family: Noto Sans, sans-serif;
+
+	--neutral-900: hsl(227, 75%, 14%);
+	--neutral-800: hsl(226, 25%, 17%);
+	--neutral-700: hsl(225, 23%, 24%);
+	--neutral-600: hsl(226, 11%, 37%);
+	--neutral-300: hsl(0, 0%, 78%);
+	--neutral-200: hsl(217, 61%, 90%);
+	--neutral-100: hsl(0, 0%, 93%);
+	--neutral-0: hsl(200, 60%, 99%);
+
+	--red-400: hsl(3, 86%, 64%);
+	--red-500: hsl(3, 71%, 56%);
+	--red-700: hsl(3, 77%, 44%);
+	--fw-700: 700;
+	--fw-500: 500;
+	--fw-400: 400;
+}
+
+[data-theme='dark'] {
+	--background-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+	--card-background-color: hsl(226, 25%, 17%);
+	--card-border-color: hsl(226, 11%, 37%);
+	--card-button-hover-text-color: hsl(226, 25%, 17%);
+
+	--text-color: hsl(0, 0%, 93%);
+	--description-text-color: hsl(0, 0%, 78%);
+
+	--button-background-color: hsl(225, 23%, 24%);
+	--button-hover-background-color: hsl(226, 11%, 37%);
+	--button-text-color: hsl(217, 61%, 90%);
+	--button-active-text-color: hsl(227, 75%, 14%);
+	--button-hover-text-color: hsl(217, 61%, 90%);
+
+	--switch-button-background-color: hsl(225, 23%, 24%);
+	--switch-button-hover-background-color: hsl(226, 11%, 37%);
+}
+
+[data-theme='light'] {
+	--background-color: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+
+	--card-background-color: hsl(200, 60%, 99%);
+	--card-border-color: hsl(217, 61%, 90%);
+	--card-button-hover-text-color: hsl(200, 60%, 99%);
+
+	--text-color: hsl(227, 75%, 14%);
+	--description-text-color: hsl(226, 11%, 37%);
+
+	--button-background-color: hsl(200, 60%, 99%);
+	--button-hover-background-color: hsl(200, 60%, 99%);
+	--button-text-color: hsl(227, 75%, 14%);
+	--button-active-text-color: hsl(0, 0%, 93%);
+	--button-hover-text-color: hsl(225, 23%, 24%);
+
+	--switch-button-background-color: hsl(0, 0%, 93%);
+	--switch-button-hover-background-color: hsl(0, 0%, 78%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: var(--background-color);
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+}
