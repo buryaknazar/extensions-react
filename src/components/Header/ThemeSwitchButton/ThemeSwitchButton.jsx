@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 
 import iconMoon from '../../../assets/images/icon-moon.svg';
 import iconSun from '../../../assets/images/icon-sun.svg';
@@ -12,7 +12,7 @@ function ThemeSwitchButton() {
 
 	const icon = isDark ? iconSun : iconMoon;
 
-	useEffect(() => {
+	useMemo(() => {
 		document.body.dataset.theme = isDark ? 'dark' : 'light';
 		localStorage.setItem('isDarkTheme', isDark);
 	}, [isDark]);

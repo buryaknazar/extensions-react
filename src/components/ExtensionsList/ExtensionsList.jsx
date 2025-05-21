@@ -4,6 +4,7 @@ import FilterButton from '../../elements/FilterButton/FilterButton';
 
 import './ExtensionsList.css';
 import Extensions from './Extensions/Extensions';
+import { Filter } from '../../settings/ExtensionsSettings/ExtensionsFilter';
 
 function ExtensionsList() {
 	const [filter, setFilter] = useState('All');
@@ -17,18 +18,18 @@ function ExtensionsList() {
 					<div className='filter'>
 						<FilterButton
 							title='All'
-							active={filter === 'All'}
-							onClick={() => setFilter('All')}
+							active={filter === Filter.ALL}
+							onClick={() => setFilter(Filter.ALL)}
 						/>
 						<FilterButton
 							title='Active'
-							active={filter === 'Active'}
-							onClick={() => setFilter('Active')}
+							active={filter === Filter.ACTIVE}
+							onClick={() => setFilter(Filter.ACTIVE)}
 						/>
 						<FilterButton
 							title='Inactive'
-							active={filter === 'Inactive'}
-							onClick={() => setFilter('Inactive')}
+							active={filter === Filter.INACTIVE}
+							onClick={() => setFilter(Filter.INACTIVE)}
 						/>
 					</div>
 				</div>

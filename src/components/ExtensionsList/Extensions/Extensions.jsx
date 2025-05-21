@@ -1,40 +1,15 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import ExtensionCard from '../ExtensionCard/ExtensionCard';
+import { useExtensions } from '../../../hooks/extensions/useExtensions';
 
 import initialExtensions from '../../../../data.json';
 
 import './Extensions.css';
 
 function Extensions({ filter }) {
-	const [extensions, setExtensions] = useState(initialExtensions);
-
-	const filteredExtensions = extensions.filter(extension => {
-		if (filter === 'All') return true;
-		return filter === 'Active' ? extension.isActive : !extension.isActive;
-	});
-
-	const removeExtension = extensionName => {
-		setExtensions(prev =>
-			prev.filter(extension => extension.name !== extensionName)
-		);
-	};
-
-	const handleSwitchChange = (event, extensionName) => {
-		const isChecked = event.target.checked;
-		setExtensions(prev => {
-			return prev.map(extension => {
-				if (extension.name === extensionName) {
-					return {
-						...extension,
-						isActive: isChecked,
-					};
-				}
-				return extension;
-			});
-		});
-	};
+	const { filteredExtensions, removeExtension, handleSwitchChange } =
+		useExtensions(initialExtensions, filter);
 
 	return (
 		<>
